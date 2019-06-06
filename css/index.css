@@ -179,13 +179,32 @@ img {
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
-.nav-container nav a {
-  padding: 0px 4rem 1rem 0px;
-  font-size: 1.6rem;
-  text-decoration: none;
+@media (max-width: 500px) {
+  .nav-container nav {
+    display: flex;
+    height: 91px;
+  }
+  .nav-container nav a {
+    padding: 0px 4rem 1rem 0px;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: black;
+  }
+}
+@media (max-width: 500px) and (max-width: 500px) {
+  .nav-container nav a {
+    padding: 51px 6rem 1rem 0px;
+  }
 }
 h1 {
   padding-right: 27.5%;
+}
+@media (max-width: 500px) {
+  h1 {
+    padding: 2px 10px 10px 10px;
+    margin: 0px -267px 32px 0px;
+    font-size: 3rem;
+  }
 }
 .footer {
   width: 100%;
@@ -261,7 +280,7 @@ header #header-img p {
   margin: 0px 58px 0px 2px;
   font-size: 2rem;
   border-radius: 15px;
-  background-color: teal;
+  background-color: #17A2B8;
   color: white;
   cursor: pointer;
 }
