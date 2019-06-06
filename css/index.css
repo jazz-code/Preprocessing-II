@@ -159,9 +159,21 @@ p {
   font-size: 1.6rem;
   padding-bottom: 20px;
 }
+@media (max-width: 500px) {
+  p {
+    width: 415px;
+    display: flex;
+    flex-direction: column;
+  }
+}
 img {
   max-width: 100%;
   height: auto;
+}
+@media (max-width: 500px) {
+  img {
+    width: 200%;
+  }
 }
 .container {
   max-width: 800px;
@@ -229,22 +241,41 @@ header #header-img {
 header #header-img p {
   padding-bottom: 2rem;
 }
-.home .content-section {
-  margin: 30px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+@media (max-width: 500px) {
+  .home {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .home .content-section {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
-.home .content-section .text-content {
-  width: 48%;
-  padding-right: 1%;
+@media (max-width: 500px) and (max-width: 500px) {
+  .home .content-section {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .home .content-section .text-content {
+    width: 48%;
+    padding-right: 1%;
+  }
+  .home .content-section .img-content {
+    width: 48%;
+    padding-left: 1%;
+  }
 }
-.home .content-section .img-content {
-  width: 48%;
-  padding-left: 1%;
-}
-.home .content-section .img-content img {
-  border-radius: 10px;
+@media (max-width: 500px) and (max-width: 500px) and (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 96%;
+  }
+  .home .content-section .img-content img {
+    border-radius: 10px;
+  }
 }
 .home .inverse-content {
   padding-bottom: 30px;
@@ -254,7 +285,7 @@ header #header-img p {
   padding-left: 1%;
   padding-right: 0;
 }
-.home .inverse-content .img-content {
+.home .inverse-content .text-content .img-content {
   padding-right: 1%;
   padding-left: 0;
 }
@@ -283,4 +314,41 @@ header #header-img p {
   background-color: #17A2B8;
   color: white;
   cursor: pointer;
+}
+@media (max-width: 500px) {
+  h2 {
+    padding-top: 15px;
+    width: 120%;
+  }
+}
+@media (max-width: 500px) {
+  h4 {
+    padding-top: 10px;
+    width: 140%;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-section {
+    padding-top: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-destination p {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .content-pick {
+    display: flex;
+    flex-direction: column;
+  }
+  .content-pick .content-pick .destination p {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination .btn {
+    padding: 10px 6px 12px 86px;
+    margin: 0px -196px 0px 45px;
+  }
 }
