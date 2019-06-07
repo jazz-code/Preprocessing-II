@@ -1,40 +1,71 @@
-.home {
+header {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px dashed #C0C0C0;
+  border-bottom: 2px dashed #C0C0C0;
 
-  .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    #header-img {
+      padding-bottom: 2rem;
 
-   
-    
-    .text-content {
-      width: 48%;
-      padding-right: 1%;
+      p {
+        padding-bottom: 2rem;
+      }
     }
+}
 
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
+.home {
+  
+  @media @mobile {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;  
 
-      img {
-        border-radius: 10px;
+    .content-section {
+      margin: 30px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @media @mobile {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+
+    
+      
+      .text-content {
+        width: 48%;
+        padding-right: 1%;
+      }
+
+      .img-content {
+        width: 48%;
+        padding-left: 1%;
+
+        @media @mobile {
+          width: 96%;
+
+        img {
+          border-radius: 10px;
+          }
+        }
       }
     }
   }
-
+} 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
-    }
 
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
+      .text-content {
+        padding-left: 1%;
+        padding-right: 0;
+      
+      .img-content {
+        padding-right: 1%;
+        padding-left: 0;
+      }
     }
   }
 
@@ -56,6 +87,55 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn{
+        .button(10px, 10px);
+      } 
     }
   }
 }// home
+
+//media
+
+@media @mobile {
+  h2 {
+    padding-top: 15px;
+    width: 120%;
+  }
+}
+
+@media @mobile {
+  h4 {
+    padding-top: 10px;
+    width: 140%;
+  }
+}
+
+@media @mobile {
+  .home .content-section {
+    padding-top: 0px;
+  }
+}
+
+@media @mobile {
+  .home .content-destination p {
+    width: 100%;
+  }
+}
+
+@media @mobile {
+  .content-pick {
+    display: flex;
+    flex-direction: column;
+
+    .content-pick .destination p {
+      width: 50%;
+    }
+  }
+}
+@media @mobile {
+  .home .content-pick .destination .btn {
+    padding: 10px 6px 12px 86px;
+    margin: 0px -196px 0px 45px;
+  }
+}
